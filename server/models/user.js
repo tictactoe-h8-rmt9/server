@@ -14,7 +14,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   User.init({
-    name: DataTypes.STRING
+    name: {
+      type : DataTypes.STRING,
+      validate : {
+        notEmpty : {
+          msg :'please write your name'
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'User',
