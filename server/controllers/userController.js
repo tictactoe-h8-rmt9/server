@@ -14,7 +14,7 @@ class UserController {
             res.status(201).json({ name : data[0].name, message : `welcome ${name}`})
         })
         .catch(err => {
-            res.status(400).json(err)
+            res.status(400).json({error : err.message})
         })
     }
 

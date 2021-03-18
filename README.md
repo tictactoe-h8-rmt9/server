@@ -36,3 +36,10 @@ _Response (200 - OK)_
     "message": "welcome user 1"
 }
 ```
+
+_Response (400 - Bad Request)_
+```
+{
+    "error": "Validation error: please write your name"
+}
+```
