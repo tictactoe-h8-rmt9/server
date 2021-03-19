@@ -2,12 +2,10 @@
 
 const express = require('express')
 const app = express()
-const router = require('./routers')
 const port = process.env.PORT || 3000
 const cors = require('cors')
 const http = require('http').createServer(app)
 const io = require('socket.io')(http)
-const fs = require('fs');
 
 
 app.use(cors())
