@@ -10,9 +10,9 @@ const io = require('socket.io')(http)
 const fs = require('fs');
 
 
+app.use(cors())
 app.use(express.urlencoded({extended : true}))
 app.use(express.json())
-app.use(cors())
 
 app.get('/', (req, res) => {
     res.send('<h1>Hello world</h1>');
